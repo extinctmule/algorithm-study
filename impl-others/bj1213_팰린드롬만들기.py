@@ -1,4 +1,4 @@
-# 9:30~
+# 9:30~10:37
 # 영어이름의 알파벳순서를 적절히 바꿔서 팰린드롬을 만들자.
 # 입력: 최대 50글자
 # 정답 여러개일 경우 사전순으로 앞서는 것을 제시. 
@@ -15,27 +15,16 @@ def sol(sdict, odds):
     ans = []
     olen = len(odds)
     if olen<=1:
+        ch = ''
         if olen==1:
             ch = list(odds)[0]
-
             
-            for k, v in sdict.items():
+        for k, v in sdict.items():
+            for _ in range(v//2):
+                ans.append(k)
 
-                for _ in range(v//2):
-                    ans.append(k)
-            
-            if odds[ch]==1:
-                return ''.join(ans)+ch+''.join(ans[::-1])
-            else:
-                tmp = ch*(odds[ch]//2)
-                return ''.join(ans)+ch+''.join(ans[::-1])
+        return ''.join(ans)+ch+''.join(ans[::-1])
 
-        else:
-            for k, v in sdict.items():
-                for _ in range(v//2):
-                    ans.append(k)
-
-            return ''.join(ans)+''.join(ans[::-1])
     else:
         return "I'm Sorry Hansoo"
 
