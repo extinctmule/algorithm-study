@@ -1,4 +1,4 @@
-# 12:10~
+# 12:10~1:13
 # 서버망가져서 특정패턴과 일치하는 파일 이름을 적절히 출력못하는 상황
 # 패턴: 알파벳소문자 여러개와 별표 하나로 이루어진 문자열
 # 패턴에 있는 * 를 알파벳소문자로 이루어진 임의의 문자열로 변환필요
@@ -17,7 +17,7 @@ files = [input() for _ in range(N)]
 #     if pat[i]!='*':
 #         cut+=1
 #     else:
-#         break
+#         break # 이러지 말고
 cut = pat.index('*')
 
 fpat = pat[:cut]
@@ -33,7 +33,6 @@ for s in files:
         print("DA")
     else:
         print("NE")
-
 
 '''
 4
