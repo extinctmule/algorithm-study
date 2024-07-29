@@ -28,6 +28,8 @@ def sol(sdict, odds):
     else:
         return "I'm Sorry Hansoo"
 
+
+
 s = input().strip()
 n = len(s)
 
@@ -47,8 +49,13 @@ else:
     
     print(sol(sdict, odds))
 
-'''
-ABCD
+
+from collections import Counter
+
+s = input()
+n = len(s)
+
+counter = sorted(Counter(s))
 
 
-'''
+
