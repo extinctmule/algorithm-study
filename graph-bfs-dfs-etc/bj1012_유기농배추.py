@@ -1,5 +1,5 @@
 '''
-10:58~
+10:58~11:49
 1이 배추있는땅, 0이 없는땅
 지렁이는 상하좌우 이동가능
 
@@ -25,7 +25,7 @@ def bfs(si,sj,v):
         
         for di,dj in [[0,1],[0,-1],[1,0],[-1,0]]:
             ni,nj = ci+di, cj+dj
-            if 0<=ni<N and 0<=nj<M and grid[ni][nj]==1 and v[ni][nj]==False:
+            if 0<=ni<N and 0<=nj<M and grid[ni][nj]==1 and v[ni][nj]==False:#이부분 ni <M, nj<N 으로 해놔서 틀림
                 q.append([ni,nj])
                 v[ni][nj]=True
     
@@ -54,3 +54,31 @@ for _ in range(T):
     ans.append(worm)
 
 print("\n".join(map(str, ans)))
+
+
+'''
+2
+10 8 17
+0 0
+1 0
+1 1
+4 2
+4 3
+4 5
+2 4
+3 4
+7 4
+8 4
+9 4
+7 5
+8 5
+9 5
+7 6
+8 6
+9 6
+10 10 1
+5 5
+'''
+'''
+2
+'''
