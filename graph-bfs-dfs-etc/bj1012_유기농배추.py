@@ -25,7 +25,7 @@ def bfs(si,sj,v):
         
         for di,dj in [[0,1],[0,-1],[1,0],[-1,0]]:
             ni,nj = ci+di, cj+dj
-            if 0<=ni<M and 0<=nj<N and grid[ni][nj]==1 and v[ni][nj]==False:
+            if 0<=ni<N and 0<=nj<M and grid[ni][nj]==1 and v[ni][nj]==False:
                 q.append([ni,nj])
                 v[ni][nj]=True
     
@@ -50,7 +50,6 @@ for _ in range(T):
     for y,x in lst:
         if bfs(y,x,v):
             worm+=1
-    
 
     ans.append(worm)
 
