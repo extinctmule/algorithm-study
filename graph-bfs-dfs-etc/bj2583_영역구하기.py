@@ -53,5 +53,6 @@ for i in range(M):
             ans1 += 1
             ans2.append(tmp)
 
+ans2.sort()# 실수: ans2 = ans2.sort()로 함
 print(ans1)
-print(" ".join(map(str,ans2.sort())))
+print(" ".join(map(str,ans2))) # 실수: ans2.sort()로 넣음
