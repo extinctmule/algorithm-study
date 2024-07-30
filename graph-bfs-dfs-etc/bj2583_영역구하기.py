@@ -18,6 +18,7 @@ def bfs(si,sj,grid,v):
     q = deque([(si,sj)])
     v[si][sj]=1
     ci,cj = si,sj
+    ans = 1
     
     while q:
         ci, cj = q.popleft()
@@ -25,8 +26,9 @@ def bfs(si,sj,grid,v):
             ni,nj = ci+i,cj+j
             if 0<=ni<M and 0<=nj<N and grid[ni][nj] and not v[ni][nj]:
                 q.append((ni,nj))
-                v[ni][nj] = v[ci][cj] + 1
-    return v[ci][cj]
+                v[ni][nj] = 1
+                ans+=1
+    return ans
     
     
 M,N,K = map(int,input().split())
