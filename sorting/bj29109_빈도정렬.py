@@ -1,5 +1,5 @@
 '''
-4:10~
+4:10~4:28
 빈도를 조사하여 암호를 해킹할 수 있다.
 메시지: 숫자 N개로 이루어진 수열, 숫자<=C (C값 주어지는게 의미가 있나?)
 이를 자주 등장하는 빈도순대로 내림차순 정렬.
@@ -11,13 +11,12 @@ from collections import Counter
 
 N, C = map(int, input().split())
 arr = list(map(int, input().split()))
-
 cnt = Counter(arr)
-
-i = 0
 ans = []
+
+# dict쓸경우 이렇게도 가능 dicts = sorted(dicts.items(), key = lambda x : x[1], reverse=True)
 for k,v in cnt.most_common():
     ans.extend([k]*v)
     
 print(" ".join(map(str, ans)))
-    
+
