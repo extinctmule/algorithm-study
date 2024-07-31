@@ -6,7 +6,7 @@ n을 곱해나가며 모든자리수가 1인지를 체크하는게 아니라 1,1
 import sys
 
 for line in sys.stdin:
-    n =int(line.strip())
+    n =int(line)
     ones = 0
     digits=1
     while True:
