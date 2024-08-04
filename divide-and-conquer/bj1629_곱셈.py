@@ -16,4 +16,4 @@ def go(A,B,C):
 
 A, B, C = map(int,input().split())
 
-print(go(A,B,C))
+print(go(A%C,B,C))# %C안해주면 94%쯤에서 틀림..
