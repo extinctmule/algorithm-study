@@ -14,9 +14,7 @@ M<=치킨집개수<=13
 
 2500*100*?  <- 시간초과?
 '''
-from itertools import combinations
 from collections import deque
-import copy
 import sys
 input = sys.stdin.readline
 
@@ -36,7 +34,7 @@ def dfs(a,b):
         return
     q.append(a)
     dfs(a+1,b+1)
-    q.popleft()
+    q.pop()
     dfs(a+1,b)
     
 
