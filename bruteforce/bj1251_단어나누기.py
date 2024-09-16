@@ -8,8 +8,8 @@ s = input()
 slen = len(s)
 ans = []
 
-for i in range(1, len(s) - 1):
-    for j in range(i + 1, len(s)):
+for i in range(1, slen - 1):
+    for j in range(i + 1, slen):
         first = s[:i]
         second = s[i:j]
         third = s[j:]
