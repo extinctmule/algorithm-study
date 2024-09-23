@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/imsumin/githubProjects/algorithm-study/2022-cpp-c/output/bj1011_FlymetotheAlphaCentauri'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B5C, symSize: 0x190 }
+  - { offsetInCU: 0x4484, offset: 0x4484, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB8ue170006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x1E8, symBinAddr: 0x100003D44, symSize: 0x58 }
+  - { offsetInCU: 0x44C4, offset: 0x44C4, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB8ue170006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x2CC, symBinAddr: 0x100003E28, symSize: 0x2C }
+  - { offsetInCU: 0x6E81, offset: 0x6E81, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B5C, symSize: 0x190 }
+  - { offsetInCU: 0x6FB3, offset: 0x6FB3, size: 0x8, addend: 0x0, symName: __ZNSt3__19basic_iosIcNS_11char_traitsIcEEE3tieB8ue170006EPNS_13basic_ostreamIcS2_EE, symObjAddr: 0x190, symBinAddr: 0x100003CEC, symSize: 0x2C }
+  - { offsetInCU: 0x6FF7, offset: 0x6FF7, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB8ue170006EPFRS3_S4_E, symObjAddr: 0x1BC, symBinAddr: 0x100003D18, symSize: 0x2C }
+  - { offsetInCU: 0x7029, offset: 0x7029, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB8ue170006Ec, symObjAddr: 0x240, symBinAddr: 0x100003D9C, symSize: 0x8C }
+  - { offsetInCU: 0x7095, offset: 0x7095, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB8ue170006Ec, symObjAddr: 0x2F8, symBinAddr: 0x100003E54, symSize: 0x38 }
+...
