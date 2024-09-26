@@ -19,8 +19,6 @@ M개 항로
 2 6
 """
 
-from collections import deque
-
 N, M = map(int, input().split())
 
 tmp = list(map(int, input().split()))
@@ -36,7 +34,7 @@ for i in range(M):
 ans = 1
 v = []
 
-for i in range(1, 11):  # in langs로 할 수도 있는듯..
+for i in range(1, 11):
     v = [False for _ in range(N + 1)]
 
     def dfs(cur, lang):
