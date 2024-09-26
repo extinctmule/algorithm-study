@@ -9,6 +9,14 @@ M개 항로
 인덱스 1부터사용. 배열크기 N+1
 체크: 방문여부에다가 언어여부까지 체크하면 됨.
 
+6 6
+3 5 5 7 7 3
+1 2
+2 3
+4 1
+4 5
+2 5
+2 6
 """
 
 from collections import deque
@@ -25,29 +33,22 @@ for i in range(M):
     nodes[a].append(b)
     nodes[b].append(a)
 
-
-def bfs(lang):
-    v = [False for _ in range(N + 1)]
-    q = deque([])
-
-    v[1] = True
-    q.append(1)
-    res = 1
-
-    while q:
-        cur = q.popleft()
-        for i in nodes[cur]:
-            if v[i] == False and langs[i] in [lang, langs[1]]:
-                v[i] = True
-                q.append(i)
-                res += 1
-
-    return res
-
-
 ans = 1
+v = []
 
 for i in range(1, 11):  # in langs로 할 수도 있는듯..
-    ans = max(ans, bfs(i))
+    v = [False for _ in range(N + 1)]
+
+    def dfs(cur, lang):
+        v[cur] = True
+
+        for j in nodes[cur]:
+            if not v[j] and langs[j] in [langs[1], lang]:
+                dfs(j, lang)
+
+        return v.count(True)
+
+    ans = max(ans, dfs(1, i))
+
 
 print(ans)
